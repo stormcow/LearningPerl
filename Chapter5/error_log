@@ -1,0 +1,4 @@
+say() on unopened filehandle rocks_fh at /home/karasiewiczj/git/selflearning/LearningPerl/Chapter5/snippets.pl line 188, <PASSWD> line 7.
+Filehandle $rocks_fh opened only for input at /home/karasiewiczj/git/selflearning/LearningPerl/Chapter5/snippets.pl line 199, <$rocks_fh> line 1.
+Filehandle $rocks_fh opened only for input at /home/karasiewiczj/git/selflearning/LearningPerl/Chapter5/snippets.pl line 199, <$rocks_fh> line 1.
+Filehandle $rocks_fh opened only for input at /home/karasiewiczj/git/selflearning/LearningPerl/Chapter5/snippets.pl line 199, <$rocks_fh> line 1.
