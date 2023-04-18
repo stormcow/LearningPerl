@@ -6,5 +6,6 @@ my @key_values = reverse sort { length($a) <=> length($b) } keys %ENV;
 my $indent     = length( $key_values[0] );
 
 foreach my $key ( sort keys %ENV ) {
-    printf "%-${indent}s => %s\n", $key, $ENV{$key};
+
+    printf "%-${indent}s => %s\n", $key, $ENV{$key} // '(undefined variable)';
 }
