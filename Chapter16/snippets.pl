@@ -101,3 +101,85 @@ my @items = ();
 
 # my $operator = 'unlink';
 # eval "$operator \@files;";
+
+# eval {
+#     ...;
+#     die "An unexpected exception message" if $unexpected;
+#     die "Bad denominator" if $dino == 0;
+#     $barne = $fred /$dino;
+# }
+
+# if ($@ =~ ./unexpected/){
+#     ...;
+# } elsif ( $@ =~/denominator/ ){
+#     ...;
+# }
+
+# {
+#     local $@;
+#     eval { ...; };
+#     if ( $@ =~ /unexpected/ ) {
+#         ...;
+#     }
+#     elsif ( $@ =~ /denominator/ ) {
+#         ...;
+#     }
+# }
+
+# my @odd_numbers;
+# foreach ( 1 .. 1000 ) {
+#     push @odd_numbers, $_ if $_ % 2;
+# }
+
+# my @odd_numbers = grep {$_@ % 2 } 1..1000;
+
+# my @matching_lines = grep { /\bfred\b/i } <$fh>;
+
+# my @matching_lines = grep /\bfred\b/i, <$fh>;
+
+# my @matching_lines = grep /\bfred\b/i, <$fh>;
+# my $line_count     = @matching_lines;
+
+# my $line_count = grep /\bfred\b/i, <$fh>;
+
+my @data = ( 4.75, 1.5, 2, 1234, 6.9456, 12345678.9, 29.95 );
+
+# my @formatted_data;
+
+# foreach (@data) {
+#     push @formatted_data, big_money($_);
+# }
+
+# my @formatted_data = map { big_money($_) } @data;
+
+# say "The money numbers are: ", map { sprintf( "%25s\n", $_ ) } @formatted_data;
+
+# say "The money numbers are: ", map { sprintf( "%25s\n", big_money($_) ) } @data;
+
+say "Some powers of two are :", map "\t" . ( 2**$_ ) . "\n", 0 .. 15;
+
+# my $first_match;
+# foreach (@characters) {
+#     if (/\bPebbles\b/i) {
+#         $first_match = $_;
+#         last;
+#     }
+# }
+
+use List::Util qw(first);
+
+# my $first_match = first { /\bPebbles\b/i } @characters;
+
+use List::Util qw(sum);
+my $total = sum( 1 .. 1000 );
+
+use List::Util qw(max);
+my $max = max( 3, 5, 10, 4, 6 );
+
+use List::Util qw(maxstr);
+
+# my $max = maxstr(@strings);
+
+use List::Util qw(shuffle);
+my @shuffles = shuffle( 1 .. 1000 );
+
