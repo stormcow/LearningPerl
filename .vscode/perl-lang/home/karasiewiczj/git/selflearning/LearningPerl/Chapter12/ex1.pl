@@ -1,1 +1,1 @@
-{"version":5,"vars":[{"containerName":"","kind":2,"name":"strict","line":1},{"range":{"end":{"line":11,"character":9999},"start":{"line":3,"character":0}},"children":[],"definition":"sub","kind":12,"name":"test","containerName":"main::","line":3}]}
+{"version":5,"vars":[{"containerName":"","name":"strict","kind":2,"line":1},{"definition":"sub","kind":12,"containerName":"main::","name":"test","line":3,"children":[],"range":{"start":{"character":0,"line":3},"end":{"character":9999,"line":11}}}]}
