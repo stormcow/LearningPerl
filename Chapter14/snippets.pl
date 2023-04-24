@@ -73,3 +73,44 @@ sub any_sort_sub {
     my ( $a, $b ) = @_;
     ...;
 }
+
+# sub by_number {
+#     if    ( $a < $b ) { -1 }
+#     elsif ( $a > $b ) { 1 }
+#     else              { 0 }
+# }
+
+sub by_number { $a <=> $b }
+my @some_numbers = qw(1 2 3 4 5 6 6 6 4 3 2 1);
+my @result       = sort by_number @some_numbers;
+say "@result";
+
+sub by_code_point { $a cmp $b }
+my @string  = qw (ala ma kota kot ma ale);
+my @strings = sort by_code_point @string;
+say "@strings";
+
+sub case_insensitive { "\F$a" cmp "\F$b" }
+
+use Unicode::Normalize;
+sub equivalents { NFKD($a) cmp NFKD($b) }
+
+my @numbers = sort { $a <=> $b } @some_numbers;
+
+my @descending = reverse sort { $a <=> $b } @some_numbers;
+@descending = sort { $b <=> $a } @some_numbers;
+
+my %score   = ( "barney" => 195, "fred" => 205, "dino" => 30, "ala" => 195 );
+my @winners = sort { $score{$b} <=> $score{$a} } keys %score;
+
+foreach my $key ( keys %score ) {
+    say "$key: $score{$key}";
+}
+
+# @patrod_IDs = sort {
+#          &fines($b) <=> &fines($a)
+#       or $items{$b} <=> $items{$a}
+#       or $family_name{$a} cmp $family_name{$b}
+#       or $personal_name{$a} cmp $personal_name{$b}
+#       or $a <=> $b
+# } @patrod_IDs;
