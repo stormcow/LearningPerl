@@ -1,1 +1,0 @@
-{"vars":[{"name":"strict","line":1,"containerName":"","kind":2},{"name":"%secret","localvar":"my","line":3,"containerName":null,"kind":13,"definition":"my"},{"line":8,"name":"%secret","kind":13,"containerName":null},{"name":"%secret","line":9,"containerName":null,"kind":13}],"version":5}

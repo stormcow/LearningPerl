@@ -1,1 +1,0 @@
-{"vars":[{"kind":2,"name":"strict","line":1,"containerName":""}],"version":5}
